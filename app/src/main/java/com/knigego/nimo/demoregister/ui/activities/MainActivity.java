@@ -90,7 +90,7 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_all_dancer:
-
+                startActivity(new Intent(this,AllDancerActivity.class));
                 break;
             case R.id.action_stage_release:
                 startActivity(new Intent(this,ReleaseChooseActivity.class));
