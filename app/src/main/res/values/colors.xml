@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="colorAccent">#4d5c9a</color>
+    <color name="actionbar_text_color">#4d5c9a</color>
+
+    <color name="refresh_color">#3d5499</color>
+
+    <color name="bg_color">#e6e9f2</color>
+    <color name="progress_color">#98a8d7</color>
+
+    <color name="image_default_color">#C9D0E3</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_1">#030303</color>
+    <color name="black_2">#383838</color>
+    <color name="gray_1">#909090</color>
+
+    <color name="divider_1">#c3c8d6</color>
+    <color name="divider_2">#e2e4eb</color>
+
+    <color name="disable_color">#c2c8d6</color>
+
+    <color name="main_tab_text_pressed_color">#4d5c9a</color>
+    <color name="main_tab_text_normal_color">#c3c8d6</color>
+
+    <color name="empty_color_1">#c3c8d6</color>
+
+    <color name="item_select_p">#dddddd</color>
+
+    <color name="camera_bg">#2c2c2c</color>
+    <color name="camera_progress_split">#005084</color>
+    <color name="camera_progress_three">#24ff00</color>
+    <color name="camera_progress_overflow">#1b5d89</color>
+    <color name="camera_progress">#fcb840</color>
+    <color name="camera_progress_delete">#f68b2b</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

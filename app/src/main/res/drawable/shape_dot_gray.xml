@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 矩形按钮 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <!-- 填充的颜色 -->
+    <solid android:color="#bbbbbb" />
+    <!-- 设置按钮的四个角为弧形 -->
+    <!-- android:radius 弧形的半径  密度无关-->
+    <size android:width="10dp"
+          android:height="10dp"/>
+
+</shape>

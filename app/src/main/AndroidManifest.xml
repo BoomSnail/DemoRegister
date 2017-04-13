@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.knigego.nimo.demoregister">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <application
+        android:name=".DemoRegisterApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme,android:label,android:name">
+
+        <!--bai du app key-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="5CSbIGTuHwCNGNYqgX4GjQw2XSGYIGhu"/>
+
+        <activity android:name=".ui.activities.LoginActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name=".ui.activities.PictureViewActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.PersonalInfoActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+        <activity android:name=".ui.activities.MyFavoriteActivity">
+        </activity>
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".ui.typehelper.MyFollowsActivity">
+        </activity>
+        <activity android:name=".ui.activities.MyVideoCacheActivity">
+        </activity>
+        <activity android:name=".ui.activities.MyAudioCacheActivity">
+        </activity>
+        <activity android:name=".ui.activities.MyFansActivity">
+        </activity>
+        <activity android:name=".ui.activities.ReleaseChooseActivity"/>
+        <activity
+            android:name=".ui.activities.ReleaseMomentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.activities.StageDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.activities.SubCommentsActivity"/>
+        <activity android:name=".ui.activities.ReleaseVideoActivity"/>
+        <activity android:name=".ui.activities.ReleaseImageActivity"/>
+        <activity android:name=".ui.activities.MediaChooseActivity"/>
+        <activity android:name=".ui.activities.MultiImageSelectorActivity"/>
+        <activity android:name=".ui.activities.MediaPreviewActivity"/>
+
+        <!-- shareSdk -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <!-- 新浪微博客户端分享回调必须配置 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name=".ui.activities.UserInfoEditActivity">
+        </activity>
+        <activity android:name=".ui.activities.UserAddressEditActivity">
+        </activity>
+
+        <!--baidu location service-->
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+    </application>
+
+</manifest>

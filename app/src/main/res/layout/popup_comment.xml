@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_1" />
+
+    <TextView
+        android:id="@+id/text_reply"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/reply"
+        android:textColor="@color/black_2"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_1" />
+
+    <TextView
+        android:id="@+id/text_copy"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/copy"
+        android:textColor="@color/black_2"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:background="@color/divider_1" />
+
+    <TextView
+        android:id="@+id/text_report"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/report"
+        android:visibility="gone"
+        android:textColor="@color/black_2"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_1" />
+
+    <TextView
+        android:id="@+id/text_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/black_2"
+        android:textSize="14sp" />
+</LinearLayout>

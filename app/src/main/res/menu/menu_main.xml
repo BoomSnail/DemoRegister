@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_all_dancer"
+          android:icon="@drawable/icon_menu_all_dancer_selector"
+          android:title="全部舞者"
+          app:showAsAction="always" />
+
+    <item android:id="@+id/action_stage_release"
+          android:icon="@drawable/icon_menu_release_selector"
+          android:title="发布舞台"
+          app:showAsAction="always" />
+
+    <item android:id="@+id/action_add_friend"
+          android:icon="@drawable/icon_menu_add_selector"
+          android:title="添加好友"
+          app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_my_friends"
+        android:icon="@drawable/icon_menu_my_friends_selector"
+        android:title="我的好友"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_moment_release"
+        android:icon="@drawable/icon_menu_release_selector"
+        android:title="发布动态"
+        app:showAsAction="always" />
+    <!--<item-->
+        <!--android:id="@+id/action_message"-->
+        <!--app:actionProviderClass="cn.crooods.bellydance.views.BadgeActionProvider"-->
+        <!--android:title="消息"-->
+        <!--app:showAsAction="always" />-->
+    <item
+        android:id="@+id/action_setting"
+        android:icon="@drawable/icon_menu_setting_selector"
+        android:title="设置"
+        app:showAsAction="always" />
+
+</menu>

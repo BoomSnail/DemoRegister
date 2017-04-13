@@ -1,0 +1,456 @@
+<resources>
+    <string name="app_name">肚皮舞</string>
+
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="main_tab_dance">舞台</string>
+    <string name="main_tab_chat">聊天</string>
+    <string name="main_tab_find">动态</string>
+    <string name="main_tab_me">我的</string>
+
+    <string name="title_dance">BellyDance</string>
+    <string name="title_chat">BellyDance</string>
+    <string name="title_find">BellyDance</string>
+    <string name="title_me">BellyDance</string>
+    <string name="title_login">登录</string>
+    <string name="title_forget_pwd">忘记密码</string>
+    <string name="title_register">注册</string>
+    <string name="title_userinfo_edit">编辑个人信息</string>
+    <string name="title_userinfo_check">查看更多资料</string>
+    <string name="title_release">发布</string>
+    <string name="title_media_preview">编辑</string>
+    <string name="title_media_record">录制</string>
+    <string name="title_media_choose">选择一个视频</string>
+    <string name="title_choose_audio">选择歌曲</string>
+    <string name="title_stage_detail">详情</string>
+    <string name="title_edit_address">地址</string>
+    <string name="title_setting">设置</string>
+    <string name="title_all_dancer">全部舞者</string>
+    <string name="title_release_moment">发布状态</string>
+    <string name="title_moment">动态</string>
+    <string name="title_image">图片</string>
+    <string name="title_my_fans">我的粉丝</string>
+    <string name="title_ta_fans">TA的粉丝</string>
+    <string name="title_my_follows">我的关注</string>
+    <string name="title_my_favorites">我的收藏</string>
+    <string name="title_my_audio">我的音乐</string>
+    <string name="title_my_video">我的视频</string>
+    <string name="title_add_friend">添加好友</string>
+    <string name="title_friend_list">我的好友</string>
+    <string name="title_app_recommend">推荐</string>
+    <string name="title_account">账号</string>
+    <string name="title_modify_pwd">修改密码</string>
+    <string name="title_change_phone">更换手机号码</string>
+    <string name="title_change_email">更换邮箱地址</string>
+    <string name="title_my_message">我的消息</string>
+    <string name="title_report">投诉举报</string>
+    <string name="title_feedback">帮助与反馈</string>
+    <string name="title_blacklist">我的黑名单</string>
+
+    <string name="menu_stage_release">发布舞台</string>
+    <string name="menu_moment_release">发布动态</string>
+    <string name="menu_all_dancer">全部舞者</string>
+    <string name="menu_register">去注册</string>
+    <string name="menu_login">去登录</string>
+    <string name="menu_save">保存</string>
+    <string name="menu_finish">完成</string>
+    <string name="menu_message">消息</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_edit">编辑</string>
+    <string name="menu_cancel">取消</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_add_friend">添加好友</string>
+    <string name="menu_my_friends">我的好友</string>
+    <string name="menu_next">下一步</string>
+    <string name="menu_chat">聊天信息</string>
+    <string name="menu_send">发送</string>
+
+    <string name="next_step">下一步</string>
+    <string name="finish">完成</string>
+    <string name="send">发送</string>
+
+    <!-- error -->
+    <string name="not_sdcard_error">没有SD卡</string>
+    <string name="network_is_not_available">请检查网络是否可用</string>
+    <string name="network_error">网络出错</string>
+    <string name="network_connection_timed_out">连接超时</string>
+    <string name="network_server_error">服务器错误，请稍后再试</string>
+    <string name="token_error">用户不存在或者密码错误</string>
+    <string name="location_error">定位失败</string>
+    <string name="user_is_exist">该账号已注册</string>
+    <string name="image_upload_fail">图片上传失败</string>
+    <string name="unlogin_error">请先登录</string>
+
+    <!-- loading tip-->
+    <string name="loading">正在加载...</string>
+    <string name="loading_login">正在登录...</string>
+    <string name="loading_get_verify_code">正在获取验证码...</string>
+    <string name="loading_register_create">正在注册...</string>
+    <string name="loading_check_phone">正在检查手机是否注册...</string>
+    <string name="loading_reset_pwd">正在重置密码...</string>
+    <string name="loading_modify_pwd">正在修改密码...</string>
+    <string name="loading_upload_image">正在上传图片...</string>
+    <string name="loading_submit">正在提交...</string>
+    <string name="loading_apply">正在提交申请...</string>
+    <string name="loading_send_comment">正在发送评论...</string>
+    <string name="loading_release">正在发布...</string>
+    <string name="loading_signup_activity">正在报名活动...</string>
+    <string name="loading_search">正在搜索...</string>
+    <string name="loading_videos">正在加载视频...</string>
+    <string name="uploading_video">正在上传视频%d%%...</string>
+    <string name="loading_save">正在保存...</string>
+    <string name="upload_cover">正在上传封面...</string>
+    <string name="search_audio">正在搜索歌曲...</string>
+    <string name="uploading_audio">正在上传歌曲...</string>
+    <string name="loading_comment">正在评论...</string>
+    <string name="loading_follow_cancel">正在取消关注...</string>
+    <string name="downloading">正在下载...</string>
+    <string name="loading_delete">正在删除...</string>
+
+    <!-- 登录-->
+    <string name="login_please">请您登录</string>
+    <string name="login_explain">登录后可以对内容点赞，收藏及评论等操作</string>
+    <string name="login_name_hint">手机号码或邮箱</string>
+    <string name="login_pwd_hint">输入密码</string>
+    <string name="login_forget_pwd">忘记密码?</string>
+    <string name="login">登录</string>
+    <string name="account_is_empty">账号不能为空</string>
+    <string name="password_is_empty">密码不能为空</string>
+
+    <!-- 忘记密码-->
+    <string name="forget_pwd_hint">注册的手机号或邮箱</string>
+    <string name="reset_pwd_success">密码重置成功</string>
+
+    <!-- 注册 -->
+    <string name="register_phone">请问您的手机号码是多少</string>
+    <string name="register_phone_explain">手机号码将作为您的登录账号，我们不会公开您的号码</string>
+    <string name="register_area_code_CN">中国 +86</string>
+    <string name="register_phone_hint">手机号码</string>
+    <string name="register_phone_support">手机号码注册目前只支持中国大陆用户</string>
+    <string name="register_info_1">注册意味着您同意</string>
+    <string name="register_info_2">与</string>
+    <string name="register_info_3">，包括</string>
+    <string name="register_info_4">。其他用户可以通过您所提供的邮件地址或手机号码找到您。</string>
+    <string name="register_terms_of_service">服务条款</string>
+    <string name="register_privacy_policy">隐私政策</string>
+    <string name="register_content_agreement">内容发布协议</string>
+    <string name="register_use_email">使用邮箱注册</string>
+    <string name="register_email">请问您的邮箱地址是什么</string>
+    <string name="register_email_explain">邮箱地址将作为您的登录账号，我们不会向您发送垃圾邮件</string>
+    <string name="register_email_hint">邮箱地址</string>
+    <string name="register_use_phone">使用手机注册</string>
+    <string name="register_sms_code">已经向您发送了短信验证码</string>
+    <string name="register_email_code">已经向您发送了邮箱验证码</string>
+    <string name="register_sms_code_explain">每天最多可以获取3次验证码</string>
+    <string name="register_sms_code_hint">输入短信验证码</string>
+    <string name="register_email_code_hint">输入邮箱验证码</string>
+    <string name="register_sms_code_resend">重新获取</string>
+    <string name="register_pwd">设置密码</string>
+    <string name="register_pwd_hint">输入密码</string>
+    <string name="register_pwd_again_hint">再次输入密码</string>
+
+    <string name="phone_num_is_empty">手机号不能为空</string>
+    <string name="email_illegal">邮箱不合法</string>
+    <string name="verify_code_is_empty">验证码不能为空</string>
+    <string name="register_get_verify_code_success">验证码获取成功</string>
+    <string name="register_check_verify_code_fail">验证码认证失败，请重试</string>
+    <string name="pwd_is_empty">密码不能为空</string>
+    <string name="pwd_confirm_is_empty">确认密码不能为空</string>
+    <string name="pwds_is_unequal">输入的密码不一致</string>
+    <string name="register_success">注册成功</string>
+
+    <!-- 首页-->
+    <string name="empty_text_1">宝宝也在问，内容哪去了？</string>
+
+
+    <!-- 我的-->
+    <string name="stage">舞台</string>
+    <string name="moment">动态</string>
+    <string name="fans">粉丝</string>
+    <string name="edit_user_info">编辑个人信息</string>
+    <string name="check_user_info">查看更多资料</string>
+    <string name="my_follow_num">我的关注：%s</string>
+    <string name="my_favorite_num">我的收藏：%s</string>
+    <string name="my_video_cache_num">我的视频：%d</string>
+    <string name="my_audio_cache_num">我的音乐：%d</string>
+    <string name="user_content_empty">您还没有发布过内容</string>
+    <string name="other_user_content_empty">TA还没有发布过内容</string>
+
+    <string name="my_stage">我的舞台</string>
+    <string name="my_moment">我的动态</string>
+    <string name="ta_stage">TA的舞台</string>
+    <string name="ta_moment">TA的动态</string>
+
+    <string name="nick_name">昵称</string>
+    <string name="nick_name_hint">设置个性昵称</string>
+    <string name="brief_hint">做个自我介绍，让大家更了解您</string>
+    <string name="brief_hint_2">TA还没有自我介绍</string>
+    <string name="address">地区</string>
+    <string name="sex">性别</string>
+
+    <string name="my_sex_boy">男</string>
+    <string name="my_sex_girl">女</string>
+    <string name="my_sex_secret">保密</string>
+
+    <string name="edit_address">手动输入</string>
+    <string name="address_edit_tip_1">请输入您所在的国家和城市的中文名称</string>
+    <string name="address_edit_tip_2">例如：中国 西安</string>
+    <string name="address_location">正在定位...</string>
+    <string name="address_location_tip">正在定位,请稍后</string>
+    <string name="address_location_fail">定位失败</string>
+    <string name="address_location_fail_2">定位失败,请尝试手动输入</string>
+    <string name="address_empty">请输入地址</string>
+    <string name="nickname_is_empty">昵称不能为空</string>
+    <string name="address_is_empty">请设置地址</string>
+    <string name="sex_is_empty">请选择性别</string>
+
+    <string name="add_friend">加好友</string>
+    <string name="is_a_friend">已是好友</string>
+    <string name="start_chat">开始聊天</string>
+    <string name="cancel_follow">取消关注</string>
+    <string name="ta_follow">关注TA</string>
+    <string name="ignore">忽略</string>
+    <string name="agree">同意</string>
+
+    <string name="apply_friend_success">添加好友申请已发送</string>
+    <string name="agree_friend_apply">添加好友成功</string>
+
+    <!-- 对话框 -->
+    <string name="dialog_choose_sex">选择您的性别</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+
+    <!-- 发布-->
+    <string name="video">视频</string>
+    <string name="image">图片</string>
+    <string name="video_shoot">拍摄</string>
+    <string name="picture_shoot">拍照</string>
+    <string name="album">相册</string>
+    <string name="video_desc">发布一个视频，时长不超过6分钟</string>
+    <string name="image_desc">发布图片，最多发布9张</string>
+    <string name="release_content_hint">写点什么吧~~~</string>
+    <string name="release_agreement">我已经阅读并同意上述协议 >></string>
+    <string name="agreement_unselect">确认同意协议才能发布</string>
+    <string name="cancel">取消</string>
+    <string name="default_cover">现在为默认封面，滑动设置新的封面</string>
+
+    <string name="record_video_transcoding_faild">视频处理失败</string>
+    <string name="record_camera_progress_message">正在处理…</string>
+    <string name="record_read_object_faild">拍摄信息读取失败！请检查SD卡，稍后重试！</string>
+    <string name="media_delete_confirm">作品尚未保存，确认要取消吗？</string>
+    <string name="record_preview_encoding">正在转码…</string>
+    <string name="record_preview_encoding_format">转码中\t%d%%</string>
+    <string name="record_preview_theme_load_faild">主题加载失败</string>
+    <string name="record_preview_music_nothing">无</string>
+
+    <string name="upload_video_fail">上传视频失败</string>
+    <string name="upload_video_success">上传视频成功</string>
+    <string name="record_preview_building">视频生成中…</string>
+    <string name="record_preview_tab_theme">主题</string>
+    <string name="record_preview_tab_filter">滤镜</string>
+
+    <string name="not_video_select">请选择一个视频</string>
+    <string name="not_video_tip">无视频</string>
+    <string name="not_video_upload">请先上传一个视频</string>
+    <string name="upload_complete">上传完成</string>
+    <string name="delete_image">删除</string>
+    <string name="not_image_upload">请先上传图片</string>
+    <string name="image_uploading">还有图片正在上传,请稍后</string>
+    <string name="upload_audio">上传音乐</string>
+    <string name="not_audio_select">暂无可选歌曲</string>
+    <string name="audio_select_fail">所选歌曲有误,请重试</string>
+    <string name="audio_upload_fail">歌曲上传失败</string>
+    <string name="not_audio_upload">请先上传一个音乐</string>
+
+    <string name="review_the_background">后台审核中</string>
+
+    <!-- 舞台-->
+    <string name="super_star_title">超级明星</string>
+    <string name="praise_info">%s人觉得很棒</string>
+    <string name="comment_info">%s条评论</string>
+    <string name="praise">赞</string>
+    <string name="praise_count">%d个赞</string>
+    <string name="collect">收藏</string>
+    <string name="comment">评论</string>
+
+    <string name="share_to_friend">分享给朋友</string>
+    <string name="wechat_share">微信好友</string>
+    <string name="wechat_circle_share">微信朋友圈</string>
+    <string name="facebook_share">脸书</string>
+    <string name="weibo_share">新浪微博</string>
+    <string name="qq_share">QQ好友</string>
+
+    <string name="comment_count">%d条评论</string>
+    <string name="not_comment">暂时没有评论</string>
+
+    <string name="sub_comment_count">%d条回复</string>
+    <string name="month_ago">%d月前</string>
+    <string name="day_ago">%d天前</string>
+    <string name="hour_ago">%d小时前</string>
+    <string name="minute_ago">%d分钟前</string>
+    <string name="second_ago">%d秒钟前</string>
+    <string name="just_now">刚刚</string>
+
+    <string name="reply">回复</string>
+    <string name="copy">复制</string>
+    <string name="report">举报</string>
+    <string name="save_picture">保存图片到本地</string>
+    <string name="picture_is_exist_or_error">图片已存在或保存失败</string>
+    <string name="picture_save_success">图片保存成功</string>
+
+    <string name="cache_video">缓存视频</string>
+    <string name="cache_audio">缓存音乐</string>
+
+    <string name="copy_success">已复制到剪贴板</string>
+    <string name="comment_hint">写下你的评论...</string>
+    <string name="reply_comment_name_hint">回复%s的评论...</string>
+    <string name="reply_comment_tip">回复 %s：</string>
+
+    <string name="report_success">已举报</string>
+
+    <string name="share_to">分享到</string>
+    <string name="loading_tip">加载中...</string>
+    <!-- 设置 -->
+    <string name="account">账号</string>
+    <string name="use_mobile_network">使用移动网络</string>
+    <string name="clear_cache">清除应用缓存</string>
+    <string name="clear_cache_success">清除缓存成功</string>
+    <string name="can_not_clear_video_cache">不影响已缓存的视频</string>
+    <string name="recommend">推荐</string>
+    <string name="blacklist">黑名单</string>
+    <string name="help_and_feedback">帮助与反馈</string>
+    <string name="terms">条款、政策、协议</string>
+    <string name="version">版本</string>
+    <string name="logout">退出登录</string>
+    <string name="checking_version">正在检查新版本</string>
+    <string name="find_new_version">发现新版本</string>
+    <string name="later_update">以后再说</string>
+    <string name="now_update">立即更新</string>
+    <string name="app_is_no_update">当前已是最新版本</string>
+    <string name="modify_password">修改密码</string>
+    <string name="change_phone_number">更换手机号码</string>
+    <string name="change_email_address">更换邮箱地址</string>
+    <string name="edit_phone_num_hint">填写手机号码</string>
+    <string name="edit_email_address_hint">填写邮箱地址</string>
+    <string name="edit_phone_num">请填写正确的手机号码</string>
+    <string name="mobile_net_close">移动网络已关闭</string>
+
+    <string name="app_share">我发现一款好玩的应用,你也来玩吧~</string>
+    <string name="feedback_hint">在这里输入您的反馈......</string>
+    <string name="feedback_content_is_empty">反馈的内容不能为空</string>
+    <string name="feedback_success">反馈成功</string>
+    <string name="only_can_change_phone">只能更改手机号码</string>
+    <string name="only_can_change_email">只能更改邮箱地址</string>
+
+    <string name="friend_apply_message_count">%d个用户请求加您好友</string>
+    <string name="like_message_count">您收到%d个赞</string>
+    <string name="comment_message_count">您收到了%d条评论</string>
+
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+
+    <!-- 软件更新 -->
+    <string name="app_download_complete">BellyDance下载完成</string>
+    <string name="app_install">下载完成，点击安装</string>
+    <string name="app_download_not_sdcard">无法下载安装文件，请检查SD卡是否挂载</string>
+    <string name="app_download_io_error">磁盘空间不足，清理垃圾后重试</string>
+    <string name="app_download_illegalstate_error">出现未知异常，请稍后重试</string>
+    <string name="app_is_downloading">BellyDance正在下载</string>
+
+    <!-- 全部舞者 -->
+    <string name="search">搜索</string>
+    <string name="search_empty">没有找到您搜索的用户</string>
+    <string name="search_tip">输入用户昵称</string>
+    <string name="cant_follow_myself">不能关注自己</string>
+    <string name="cant_friend_myself">不能添加自己为好友</string>
+
+    <!-- 发现 -->
+    <string name="moment_edit_tip">分享您此刻的心情~~~</string>
+    <string name="moment_content_empty">请分享您的心情、图片或者视频</string>
+
+    <!-- 收藏 -->
+    <string name="my_favorites_empty_tip">您没收藏过任何内容</string>
+    <string name="content_delete">是否删除？</string>
+    <string name="delete_confirm">删除</string>
+    <string name="delete_cancel">不删除</string>
+
+    <!-- 我的音乐 -->
+    <string name="check_video">查看视频</string>
+    <string name="audio_is_exist">该音乐已缓存</string>
+    <string name="audio_is_downloading">该音乐正在下载,请勿重复操作</string>
+    <string name="video_is_exist">该视频已缓存</string>
+    <string name="video_is_downloading">该视频正在下载,请勿重复操作</string>
+    <string name="notification_title_audio">%s 分享的音乐</string>
+    <string name="notification_title_video">%s 分享的视频</string>
+    <string name="download_finish">下载完成</string>
+    <string name="video_space_tip_1">占用空间%s</string>
+    <string name="video_space_tip_2">，可用空间%s</string>
+    <string name="delete">删除</string>
+    <string name="all_check">全选</string>
+    <string name="from_stage">来自舞台  %s</string>
+    <string name="from_moment">来自动态  %s</string>
+
+
+    <!-- 分享 -->
+    <string name="share_tip">分享自</string>
+    <string name="share_not_installed_wechat">未安装微信应用</string>
+    <string name="share_not_installed_qq">未安装QQ应用</string>
+    <string name="share_not_installed_facebook">未安装脸书应用</string>
+    <string name="share_not_installed_weibo">未安装新浪微博应用</string>
+
+    <!-- 聊天 -->
+    <string name="professional_dancer">，专业舞者</string>
+    <string name="rong_im_login_fail">IM登录失败</string>
+    <string name="default_title">聊天</string>
+    <string name="text_typing_title">对方正在输入...</string>
+    <string name="voice_typing_title">对方正在讲话....</string>
+    <string name="remark_setting">设置备注</string>
+    <string name="message_dnd">消息免打扰</string>
+    <string name="check_history">查找聊天记录</string>
+    <string name="clear_history">清空聊天记录</string>
+    <string name="delete_friend">删除好友</string>
+    <string name="add_blacklist">加入黑名单</string>
+    <string name="cancel_blacklist">取消黑名单</string>
+    <string name="report_friend">投诉举报</string>
+    <string name="clear_history_success">聊天记录已清空</string>
+    <string name="clear_history_fail">清空聊天记录失败,请重试</string>
+    <string name="delete_friend_success">删除好友成功</string>
+    <string name="delete_friend_fail">删除好友失败,请重试</string>
+    <string name="add_blacklist_success">加入黑名单成功</string>
+    <string name="add_blacklist_fail">加入黑名单失败,请重试</string>
+    <string name="cancel_blacklist_success">移除黑名单成功</string>
+
+    <string name="report_sex">色情低俗</string>
+    <string name="report_ad">广告骚扰</string>
+    <string name="report_politics">政治敏感</string>
+    <string name="report_fraud">欺诈骗钱</string>
+    <string name="report_law">违法（暴力，恐怖，违禁品等）</string>
+
+    <string name="search_composite_tip">输入搜索关键词</string>
+    <string name="search_composite_cannot_empty">关键词为空</string>
+    <string name="friend_title">好友</string>
+    <string name="message_title">聊天记录</string>
+
+    <string name="upload_image_evidence">上传照片证据</string>
+
+    <string name="friend_search_tip">请输入手机号或者邮箱</string>
+    <string name="composite_search_empty">无搜索结果</string>
+
+    <string name="chat_not_friend_message">你还不是他（她）的好友，请先发送好友验证请求，对方验证通过后，才能聊天。</string>
+    <string name="send_friend_verify">发送好友验证</string>
+    <string name="receive_praise">收到一个赞</string>
+    <string name="receive_comment">收到一条评论</string>
+
+    <string name="share_dance">来自[%s]发布的舞蹈</string>
+    <string name="share_picture">来自[%s]发布的图片</string>
+    <string name="share_moment">来自[%s]发布的动态</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_fail">分享失败</string>
+    <string name="share_cancel">取消分享</string>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_moment_load_fail"/>
+
+        <TextView
+            android:id="@+id/text_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_reload"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_first_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loading_moment_first"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="@string/loading_tip"
+            android:textColor="@color/black_2"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <com.canyinghao.canrefresh.CanRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:can_bg_down="@color/bg_color"
+        app:can_bg_up="@color/bg_color"
+        app:can_duration="500">
+
+        <com.knigego.nimo.demoregister.view.RefreshView
+            android:id="@id/can_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:refresh_type="1"/>
+
+        <com.knigego.nimo.demoregister.view.RefreshView
+            android:id="@id/can_refresh_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:refresh_type="1"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/can_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.canyinghao.canrefresh.CanRefreshLayout>
+</RelativeLayout>
