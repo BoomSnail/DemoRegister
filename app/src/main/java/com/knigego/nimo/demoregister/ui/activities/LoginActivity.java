@@ -1,13 +1,16 @@
 package com.knigego.nimo.demoregister.ui.activities;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
@@ -17,103 +20,131 @@ import com.knigego.nimo.demoregister.R;
 import com.knigego.nimo.demoregister.net.RetrofitUtil;
 import com.knigego.nimo.demoregister.storage.AppPref;
 import com.knigego.nimo.demoregister.ui.base.BaseActivity;
+import com.knigego.nimo.demoregister.util.AndroidBug5497Workaround;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 public class LoginActivity extends BaseActivity {
 
-    private EditText mLoginName;
-    private EditText mLoginPassword;
-    private Button mLogin;
+    @Bind(R.id.edit_login_name)
+    EditText mEditLoginName;
+    @Bind(R.id.edit_login_password)
+    EditText mEditLoginPassword;
+    @Bind(R.id.layout_login)
+    LinearLayout mLayoutLogin;
+    @Bind(R.id.text_forget_pwd)
+    TextView mTextForgetPwd;
+    @Bind(R.id.btn_login)
+    Button mBtnLogin;
+    @Bind(R.id.layout_bottom)
+    RelativeLayout mLayoutBottom;
 
-    private String userName;
-    private ProgressDialog mProgressDialog;
+    private boolean isFromMtTab;
     @Override
     protected void _onCreate(Bundle savedInstanceState) {
-//        Window window = getWindow();
-//        window.addFlags(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
-        initView();
+        ButterKnife.bind(this);
+        AndroidBug5497Workaround.assistActivity(this);
+        setTitle(R.string.title_login);
+        getIntentValue();
+
         AppPref appPref = AppPref.getInstance();
+        String loginName = appPref.getLoginName();
         String password = appPref.getPassword();
 
-        if (!TextUtils.isEmpty(userName)) {
-            mLoginName.setText(userName);
+        if (!TextUtils.isEmpty(loginName)) {
+            mEditLoginName.setText(loginName);
         }
 
         if (!TextUtils.isEmpty(password)) {
-            mLoginPassword.setText(password);
+            mEditLoginPassword.setText(password);
         }
 
-//        if (!TextUtils.isEmpty(appPref.getAccessToken())) {
-//            startActivity(new Intent(this,MainActivity.class));
-//        }
+        appPref.saveUser(null);
+        appPref.saveUserProfile(null);
+        appPref.saveAccessToken("");
     }
 
-    private void initView() {
+    private void getIntentValue() {
+        Intent intent = getIntent();
+        if (intent.hasExtra("fromMy")) {
+            isFromMtTab = intent.getBooleanExtra("fromMy",false);
+        }
+    }
 
-        mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setMessage("正在校验登录");
-        mProgressDialog.setTitle("温馨提示");
-        mProgressDialog.setCancelable(true);
-        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+    @OnClick(R.id.text_forget_pwd)
+    public void gotoForgetPwd(View v){
+        startActivity(new Intent(this,ForgetPasswordActivity.class));
+    }
 
-        mLoginName = (EditText) findViewById(R.id.login_name);
-        mLoginPassword = (EditText) findViewById(R.id.login_password);
-        mLogin = (Button) findViewById(R.id.login);
+    @OnClick(R.id.btn_login)
+    public void login(){
+        if (CheckPersonalInfo()) {
+            doGetTokenSession();
+        }
+    }
 
-        mLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean yes = CheckPersonalInfo();
-                if (yes) {
-                    doGetTokenSession();
-                }
-            }
-        });
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_login,menu);
+        return true;
+    }
+
+    @Override
+    protected boolean _onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_register:
+
+                //去register
+                startActivity(new Intent(this,RegisterPhoneActivity.class));
+                break;
+            default:
+                break;
+        }
+        return true;
     }
 
     private void doGetTokenSession() {
 
-        mProgressDialog.show();
+        showProgress(R.string.loading_login);
         IUserStubService service = RetrofitUtil.createApi(IUserStubService.class);
-        service.obtainAccessToken("mobile-client","mobile", "password", "read,write",
-                mLoginName.getText().toString().trim(),mLoginPassword.getText().toString().trim(),
-                new RetrofitUtil.ActivityCallback<ResponseT<JSONObject>>(this){
+        service.obtainAccessToken("mobile-client", "mobile", "password", "read,write",
+                mEditLoginName.getText().toString().trim(), mEditLoginPassword.getText().toString().trim(),
+                new RetrofitUtil.ActivityCallback<ResponseT<JSONObject>>(this) {
                     @Override
                     public void success(ResponseT<JSONObject> jsonObjectResponseT, Response response) {
                         super.success(jsonObjectResponseT, response);
                         String accessToken = jsonObjectResponseT.getBizData().getString("value");
                         if (!TextUtils.isEmpty(accessToken)) {
                             AppPref.getInstance().saveAccessToken(accessToken);
-
-                            Log.i("---------------\n", "success: " + accessToken);
-                            AppPref.getInstance().setLoginName(mLoginName.getText().toString().trim());
-                            AppPref.getInstance().setPassword(mLoginPassword.getText().toString().trim());
-                                Toast.makeText(LoginActivity.this,"dengluchenggong ",Toast.LENGTH_SHORT).show();
-                            mProgressDialog.dismiss();
-                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                        }else {
-                            mProgressDialog.dismiss();
+                            AppPref.getInstance().setLoginName(mEditLoginName.getText().toString().trim());
+                            AppPref.getInstance().setPassword(mEditLoginPassword.getText().toString().trim());
+                            hideProgress();
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        } else {
+                            hideProgress();
                         }
                     }
 
                     @Override
                     public void failure(RetrofitError error) {
                         super.failure(error);
-                        mProgressDialog.dismiss();
+                        hideProgress();
                     }
                 });
     }
 
     private boolean CheckPersonalInfo() {
-        if (TextUtils.isEmpty(mLoginName.getText().toString().trim()))  {
-            Toast.makeText(LoginActivity.this,"用户名为空",Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(mEditLoginName.getText().toString().trim())) {
+            Toast.makeText(LoginActivity.this, R.string.account_is_empty, Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (TextUtils.isEmpty(mLoginPassword.getText().toString().trim())) {
-            Toast.makeText(LoginActivity.this,"密码不能为空",Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(mEditLoginPassword.getText().toString().trim())) {
+            Toast.makeText(LoginActivity.this, R.string.password_is_empty, Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -124,6 +155,5 @@ public class LoginActivity extends BaseActivity {
         super.onDestroy();
         mProgressDialog = null;
     }
-
 
 }

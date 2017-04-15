@@ -1,6 +1,7 @@
 package com.knigego.nimo.demoregister.uimanager;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.ViewGroup;
 
 import java.util.List;
@@ -36,6 +37,7 @@ public class VarietyTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        //每个itemviewType的createViewHolder
         return mItemViewTypeHelperManager.getItemTypeHelperAt(viewType)
                 .createViewHolder(parent);
     }
@@ -54,6 +56,7 @@ public class VarietyTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         try {
 
             int type = mItemViewTypeHelperManager.getTypeView(itemViewData.getItemViewTypeHelper());
+
             return type;
         }catch (NullPointerException e){
             e.printStackTrace();

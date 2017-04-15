@@ -3,6 +3,7 @@ package com.knigego.nimo.demoregister.net;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
@@ -62,13 +63,12 @@ public class RetrofitUtil {
         private final WeakReference<Context> mRef;
 
         public ActivityCallback(Context context) {
-            mRef = new WeakReference<Context>(context);
+            mRef = new WeakReference<>(context);
         }
 
         public Context getContext() {
             return mRef.get();
         }
-
 
         @Override
         public void success(T t, Response response) {
@@ -133,6 +133,7 @@ public class RetrofitUtil {
                                 String accessToken = jsonObjectResponseT.getBizData().getString("value");
                                 if (!TextUtils.isEmpty(accessToken)) {
                                     AppPref.getInstance().saveAccessToken(accessToken);
+                                    Log.i("  ssssssssss", "success: " +accessToken);
                                 }
                             } else {
                                 Toast.makeText(context,jsonObjectResponseT.getMsg(),Toast.LENGTH_SHORT).show();

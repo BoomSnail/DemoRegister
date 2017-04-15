@@ -106,7 +106,7 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.action_setting:
 
-                startActivity(new Intent(this,LoginActivity.class));
+                startActivity(new Intent(this,SettingActivity.class));
                 break;
             default:
                 break;

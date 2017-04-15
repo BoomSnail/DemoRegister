@@ -1,6 +1,8 @@
 package com.knigego.nimo.demoregister;
 
 
+import java.io.File;
+
 /**
  * Created by ThinkPad on 2017/3/23.
  */
@@ -8,9 +10,19 @@ package com.knigego.nimo.demoregister;
 public class JavaTest {
 
     public static void main(String[] args) {
-        int a = 85;
-        int b = 10;
-        System.out.println(b/a);
+        File file = new File("D:/QQ");
+        String[] lists = file.list();
+        for (int i = 0; i < lists.length; i++) {
+            System.out.println(lists[i]);
+        }
+
+        System.out.println("-------------------------------");
+
+        File[] files = file.listFiles();
+
+        for (int i = 0; i < files.length; i++) {
+            System.out.println(files[i]);
+        }
     }
 
 //    private static int getCount(int c, int d) {

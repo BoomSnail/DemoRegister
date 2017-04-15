@@ -47,4 +47,18 @@ public class AppConstants {
     public static final String IS_COMMENT = "IS_COMMENT";
     public static final String TYPE = "TYPE" ;
     public static final String RELEASE_CONTENT_KEY = "RELEASE_CONTENT_KEY";
+
+    /**注册或者忘记密码类型*/
+    public static final int TYPE_EMAIL_FORGET_PWD = 3;
+    public static final int TYPE_PHONE_FORGET_PWD = 2;
+    public static final String PHONE_MUN = "phoneNum";
+    public static final String TYPE_REGISTER_OR_FORGET_PWD ="type_register_or_forget_pwd" ;
+    public static final int TYPE_PHONE_REGISTER = 0;
+    public static final int TYPE_EMAIL_REGISTER = 1;
+    public static final int TYPE_PHONE_ACCOUNT_CHANGE = 6;
+    public static final int TYPE_EMAIL_ACCOUNT_CHANGE = 7;
+
+
+    public static final String TITLE = "title";
+    public static final String WEB_URL = "web_url";
 }

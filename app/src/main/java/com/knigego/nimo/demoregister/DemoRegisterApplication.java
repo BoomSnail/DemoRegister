@@ -20,6 +20,7 @@ public class DemoRegisterApplication extends Application {
         instance = this;
 
         ShareSDK.initSDK(this);
+//        PgyCrashManager.register(this);
     }
 
     public static Context getContext() {

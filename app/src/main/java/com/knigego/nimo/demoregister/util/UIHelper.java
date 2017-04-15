@@ -12,6 +12,7 @@ import com.knigego.nimo.demoregister.ui.activities.PersonalInfoActivity;
 import com.knigego.nimo.demoregister.ui.activities.StageDetailActivity;
 import com.knigego.nimo.demoregister.ui.activities.UserInfoEditActivity;
 import com.knigego.nimo.demoregister.ui.activities.VideoPlayActivity;
+import com.knigego.nimo.demoregister.ui.activities.WebViewActivity;
 
 /**
  * activity 跳转
@@ -64,7 +65,12 @@ public class UIHelper {
         context.startActivity(intent);
     }
 
-    public static void goToWebView(Context context, String linkUrl, String name) {
+    public static void goToWebView(Context context, String url, String title) {
+
+        Intent intent = new Intent(context,WebViewActivity.class);
+        intent.putExtra(AppConstants.TITLE,title);
+        intent.putExtra(AppConstants.WEB_URL,url);
+        context.startActivity(intent);
 
     }
 }

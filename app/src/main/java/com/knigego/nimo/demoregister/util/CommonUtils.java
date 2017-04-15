@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.crooods.wd.dto.post.MediaImageDto;
+import com.knigego.nimo.demoregister.ui.activities.SettingActivity;
 
 import java.util.List;
 
@@ -85,5 +86,25 @@ public class CommonUtils {
         }
 
 
+    }
+
+    public static String getAppVersionName(Context context) {
+        String versionName = "";
+        try {
+            PackageManager packageManager = context.getPackageManager();
+            PackageInfo packageInfo = packageManager.getPackageInfo(context.getPackageName(),0);
+            versionName = packageInfo.versionName;
+            if (versionName == null) {
+                return "";
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return versionName;
+    }
+
+    public static boolean isEmail(String account) {
+        return false;
     }
 }

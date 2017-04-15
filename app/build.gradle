@@ -39,6 +39,8 @@ dependencies {
     compile project(':multi-image-selector')
     compile files('libs/ShareSDK-Core-2.8.2.jar')
     compile files('libs/BaiduLBS_Android.jar')
+
+    //    compile 'com.pgyersdk:sdk:2.4.5'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.alibaba:fastjson:1.2.24'
@@ -56,5 +58,6 @@ dependencies {
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     compile 'com.qiniu:qiniu-android-sdk:7.0.7.1'
+    compile 'com.github.lsjwzh.RecyclerViewPager:lib:v1.1.2'
     testCompile 'junit:junit:4.12'
 }

@@ -24,6 +24,7 @@ import java.util.List;
 
 public class AppPref extends PreferConfig {
 
+
     private static AppPref instance = null;
     private SharedPreferences app = null;
     private static final String PREFERENCE_NAME = "DemoRegister_pref";
@@ -81,7 +82,7 @@ public class AppPref extends PreferConfig {
         }
     }
 
-    private void saveUserRole(String role) {
+    public void saveUserRole(String role) {
         put(USER_ROLE,role);
     }
 
@@ -93,7 +94,7 @@ public class AppPref extends PreferConfig {
         return null;
     }
 
-    private void saveUserId(long userId) {
+    public void saveUserId(long userId) {
         put(USER_ID, userId);
     }
 
@@ -210,6 +211,17 @@ public class AppPref extends PreferConfig {
 
 
     public void saveQiNiuToken(String qiNiuToken) {
+
+    }
+
+    public void setMoibleNetUsable(boolean usable){
+        put(MOBILE_NET_USABLE,usable);
+    }
+    public boolean isMobileNetUsable() {
+        return app.getBoolean(MOBILE_NET_USABLE,true);
+    }
+
+    public void saveUser(Object o) {
 
     }
 }
